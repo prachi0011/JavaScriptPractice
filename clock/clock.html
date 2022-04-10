@@ -62,11 +62,11 @@
           date = new Date();
           s = date.getSeconds();
           m = date.getMinutes();
-          if(s == 0){
-              s = s + '0';
+          if(s < 10){
+              s =  '0' + s;
           }
-          if(m == 0){
-              m += '0';
+          if(m < 10){
+              m = '0' + m;
           }
           x.innerHTML = date.getHours() + ":"+ m + ":"+ s;
         }, 1000);
